@@ -31,6 +31,7 @@ public class FXMLController implements Initializable {
     private void onConvertAction(ActionEvent event) {
         float conversionValue = (Float.parseFloat(yourcurrency.getText()) / Float.parseFloat(othercurrency.getText())) * (Float.parseFloat(currencytobeconvert.getText()));
         lblOut.setText(Float.toString(conversionValue));
+        lblOut.setText(String.format("%.2f",conversionValue));
     }
     
     @Override
